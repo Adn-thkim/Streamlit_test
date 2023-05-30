@@ -26,3 +26,7 @@ for i in range(100):
 
 status_text.text('Done!')
 st.balloons()
+
+st.text_area(label = 'write here')
+
+st.text_area(label = 'write here', height = 200)
