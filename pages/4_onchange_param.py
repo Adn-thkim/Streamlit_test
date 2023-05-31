@@ -57,7 +57,7 @@ def handle_text_input(value, additional_arg):
 additional_arg = "Hello"
 keyword_arg = "World"
 
-user_input = st.text_input("Enter text",callback = handle_text_input,args = additional_arg)
+# user_input = st.text_input("Enter text",callback = handle_text_input,args = additional_arg)
                            # kwargs={"keyword_arg": keyword_arg}
                           
 
