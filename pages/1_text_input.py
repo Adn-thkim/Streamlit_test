@@ -1,8 +1,5 @@
 import streamlit as st
 
-name = st.text_input('당신의 이름은 무엇입니까?', help="성을 포함한 이름 전체를 입력해주세요")
-st.write('User\'s name is ', name)
-
 st.text_input('label_visibility: defulat')
 
 st.text_input(
@@ -17,18 +14,20 @@ st.text_input('label_visibility: collapsed',
 st.text_input('value',
               'value')
 
-# test_value = st.text_input('value',
-#                            1)
-# st.write(type(test_value))
+test_value = st.text_input('value',
+                           1)
+# 필드에 입력한 값이 str 타입으로 변환되어 test_value에 저장됨
+# test_value * 2의 결과값은 test_value를 반복 출력하는 형태
+st.write(test_value * 2)
 
+st.text_input('이메일 주소를 입력해주세요.',
+			  placeholder = 'likelion@likelion.org')
 
-#adding a single-line text input widget
-title = st.text_input('nothing_parameter', 'write here')
+name = st.text_input('당신의 이름은 무엇입니까?', help="성을 포함한 이름 전체를 입력해주세요")
+st.write('User\'s name is ', name)
 
+st.text_input('text_area', max_chars = 30)
 
+st.text_input('type: password', '', type = 'password')
 
-title_disabled = st.text_input('disabled: True', '', disabled = True)
-
-title_password = st.text_input('type: password', '', type = 'password')
-
-title_placeholder = st.text_input('placeholder', '', placeholder = "write here")
+st.text_input('disabled: True', '', disabled = True)

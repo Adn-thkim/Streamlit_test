@@ -2,31 +2,25 @@ import streamlit as st
 import numpy as np
 import time
 
-# https://docs.streamlit.io/knowledge-base/using-streamlit/animate-elements
+st.text_area(label = 'label')
 
-progress_bar = st.progress(0)
-status_text = st.empty()
-chart = st.line_chart(np.random.randn(10, 2))
+st.text_area('label_visibility: hidden',
+              label_visibility = 'hidden')
 
-for i in range(100):
-    # Update progress bar.
-    progress_bar.progress(i + 1)
+st.text_area('label_visibility: collapsed',
+              label_visibility = 'collapsed')
 
-    new_rows = np.random.randn(10, 2)
+st.text_area('value',
+              'value')
 
-    # Update status text.
-    status_text.text(
-        'The latest random number is: %s' % new_rows[-1, 1])
+st.text_area(label = 'height', height = 200)
 
-    # Append data to the chart.
-    chart.add_rows(new_rows)
+st.text_area('이메일 주소를 입력해주세요.',
+			  placeholder = 'likelion@likelion.org')
 
-    # Pretend we're doing some computation that takes time.
-    time.sleep(0.1)
+name = st.text_area('당신의 이름은 무엇입니까?', help="성을 포함한 이름 전체를 입력해주세요")
+st.write('User\'s name is ', name)
 
-status_text.text('Done!')
-st.balloons()
+st.text_area('max_chars', max_chars = 30)
 
-st.text_area(label = 'write here')
-
-st.text_area(label = 'write here', height = 200)
+st.text_area('disabled: True', '', disabled = True)
