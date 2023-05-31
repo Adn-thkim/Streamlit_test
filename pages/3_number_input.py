@@ -19,4 +19,4 @@ st.number_input("Enter a number", value = 0, format="%d")
 # value3 = st.number_input("Enter a number", format="{:.2%}")
 
 
-st.balloons()
+# st.balloons()
