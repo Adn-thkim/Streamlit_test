@@ -1,41 +1,48 @@
 import streamlit as st
 
-text = st.text_input('label_visibility: defulat')
-st.write('필드에 입력된 값은 ', text, '입니다')
+st.header('Text Input')
 
-text = st.text_input(
+name = st.text_input(label = '당신의 이름은 무엇입니까?')
+st.write(name, '입니다')
+
+st.subheader('label')
+st.text_input(
     label = "**굵은 텍스트**, _기울인 텍스트_, ~~취소선~~, 인라인 코드: $x + y$ ,🙌 이모지 :+1: ,[링크](https://example.com)")
-st.write('필드에 입력된 값은 ', text, '입니다')
 
-text = st.text_input('label_visibility: hidden',
-              label_visibility = 'hidden')
-st.write('필드에 입력된 값은 ', text, '입니다')
+st.subheader('label_visiblilty')
 
-text = st.text_input('label_visibility: collapsed',
-              label_visibility = 'collapsed')
-st.write('필드에 입력된 값은 ', text, '입니다')
+name = st.text_input(label = '당신의 이름은 무엇입니까?', label_visibility = 'hidden', key = '1')
+st.write(name, '입니다')
 
-text = st.text_input('value',
-                     'value')
-st.write('필드에 입력된 값은 ', text, '입니다')
+name = st.text_input(label = '당신의 이름은 무엇입니까?', label_visibility = 'collapsed', key = '2')
+st.write(name, '입니다')
 
-test_value = st.text_input('value', 1)
-# 필드에 입력한 값이 str 타입으로 변환되어 test_value에 저장됨
-# test_value * 2의 결과값은 test_value를 반복 출력하는 형태
-st.write(test_value * 2)
+st.subheader('value')
 
-text = st.text_input('이메일 주소를 입력해주세요.',
-			  placeholder = 'likelion@likelion.org')
-st.write('필드에 입력된 값은 ', text, '입니다')
+name = st.text_input(label = '당신의 이름은 무엇입니까?', value = '멋쟁이사자처럼', key = '3')
+st.write(name, '입니다')
 
-name = st.text_input('당신의 이름은 무엇입니까?', help="성을 포함한 이름 전체를 입력해주세요")
-st.write('입력된 이름은 ', name, '입니다')
+st.subheader('placeholder')
 
-text = st.text_input('text_input', max_chars = 30)
-st.write('필드에 입력된 값은 ', text, '입니다')
+email = st.text_input('이메일 주소를 입력해주세요.',
+					   placeholder = 'likelion@likelion.org')
+st.write('입력하신 이메일 주소는', email)
 
-text = st.text_input('type: password', '', type = 'password')
-st.write('필드에 입력된 값은 ', text, '입니다')
+st.subheader('help')
 
-text = st.text_input('disabled: True', '', disabled = True)
-st.write('필드에 입력된 값은 ', text, '입니다')
+st.text_input('당신의 이름은 무엇입니까?', help="성을 포함한 이름 전체를 입력해주세요")
+
+st.subheader('max_chars')
+
+name = st.text_input('당신의 이름은 무엇입니까?', max_chars = 30, key = '4')
+st.write(name, '입니다')
+
+st.subheader('type')
+
+password = st.text_input('비밀번호를 입력하세요', '', type = 'password')
+st.write('필드에 입력된 값은 ', password, '입니다')
+
+st.subheader('diabled')
+
+name = st.text_input('당신의 이름은 무엇입니까?', '', disabled = True, key = '5')
+st.write(name, '입니다')

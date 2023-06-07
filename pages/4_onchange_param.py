@@ -49,15 +49,16 @@ def display_code():
     ''')
 
 
-def handle_text_input(value, additional_arg):
-    st.write("Input value:", value)
-    st.write("Additional argument:", additional_arg)
+def handle_text_input(value, *args):
+    st.write(f"{args}, {value}")
+    # st.write("Input value:", value)
+    # st.write("Additional argument:", args)
     # st.write("Keyword argument:", keyword_arg)
 
-additional_arg = "Hello"
-keyword_arg = "World"
+# additional_arg = "Hello"
+# keyword_arg = "World"
 
-# user_input = st.text_input("Enter text",callback = handle_text_input,args = additional_arg)
+user_input = st.text_input("Enter text", on_change = handle_text_input, args = ('Hello', ))
                            # kwargs={"keyword_arg": keyword_arg}
                           
 
