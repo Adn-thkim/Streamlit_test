@@ -32,3 +32,9 @@ chart_data = pd.DataFrame(
 
 # 컬럼 나머지 부분에 라인차트 생성
 cols[2].line_chart(chart_data)
+
+df = pd.DataFrame(np.random.rand(10,5), columns=['A', 'B', 'C', 'D', 'E'])
+st.dataframe(df)
+
+sample_dict = {'A': 1, 'B': 2}
+st.dataframe(sample_dict)
