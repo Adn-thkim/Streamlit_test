@@ -1,4 +1,7 @@
+from st_pages import add_page_title
 import streamlit as st
+
+add_page_title()
 
 st.number_input(label = 'Label 출력 필드입니다'
                ,help = '사용자에게 간단한 설명을 제공할 수 있습니다')
@@ -8,7 +11,7 @@ st.number_input(label = 'Label 출력 필드입니다'
 #              help = '사용자에게 간단한 설명을 제공할 수 있습니다',
 #              max_chars = 30)
 
-st.header('Number Input')
+# st.header('Number Input')
 
 st.subheader('label')
 st.number_input('label')

@@ -1,13 +1,14 @@
+from st_pages import add_page_title
 import streamlit as st
-import numpy as np
-import time
+
+add_page_title()
 
 # st.text_area(label = 'Label 출력 필드입니다',
 #              placeholder = '입력 형식 예시입니다',
 #              help = '사용자에게 간단한 설명을 제공할 수 있습니다',
 #              max_chars = 30)
 
-st.header('Text Area')
+# st.header('Text Area')
 
 st.subheader('label')
 st.text_area(label = '간단한 인사말')

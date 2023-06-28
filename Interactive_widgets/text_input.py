@@ -1,7 +1,10 @@
+from st_pages import add_page_title
 import streamlit as st
 
+add_page_title()
 
-st.header('Text Input')
+
+# st.header('Text Input')
 
 name = st.text_input(label = '당신의 이름은 무엇입니까?')
 st.write(name, '입니다')
