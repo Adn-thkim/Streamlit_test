@@ -80,3 +80,17 @@ with st.echo("below"):
 #     st.help(add_indentation)
     
 # -------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+st.checkbox("Disable radio widget", help="disabled")
+
+
+
+
+
+
