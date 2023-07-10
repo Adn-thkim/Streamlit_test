@@ -55,10 +55,12 @@ nc_colors = [
 
 # 데이터 로드
 def get_df():
+
+    current_dir = os.path.dirname(os.path.abspath(__file__))
     
-    team_df = pd.read_csv(os.path.join(os.getcwd(), 'data/team_rank_table_2008_2018.csv'))
-    bat_df = pd.read_csv(os.path.join(os.getcwd(), 'data/regular_season_batter_nan_processed.csv'))
-    bat_image = pd.read_csv(os.path.join(os.getcwd(), 'data/nc_player_img.csv'))
+    team_df = pd.read_csv(os.path.join(current_dir, 'data/team_rank_table_2008_2018.csv'))
+    bat_df = pd.read_csv(os.path.join(current_dir, 'data/regular_season_batter_nan_processed.csv'))
+    bat_image = pd.read_csv(os.path.join(current_dir, 'data/nc_player_img.csv'))
     
     return team_df, bat_df, bat_image
 
