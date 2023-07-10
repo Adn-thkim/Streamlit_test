@@ -16,9 +16,6 @@ st.set_page_config(
     initial_sidebar_state = 'collapsed',
 )
 
-with open('style.css') as f:
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-
 
 team_colors = {
     'LG': 'rgba(156, 175, 200, 0.8)',  # 'rgba(195, 4, 66, 1)',  # '#B82E2E',
