@@ -338,12 +338,12 @@ with tab_stat:
         stat = koreanize_dict[stat_kor]
             
         # 시각화
-        min_xaxis = np.floor(agg_df[stat].min())
+        min_xaxis = np.floor(agg_df[stat].min() * 0.8)
         max_xaxis = np.ceil(agg_df[stat].max())
-        xtick = round((max_xaxis - min_xaxis)/5)
+        xtick = round((max_xaxis - min_xaxis) / 5)
         
         if agg_df[stat].min() < 1:
-            min_xaxis = np.floor(agg_df[stat].min() * 100) / 100
+            min_xaxis = np.floor(agg_df[stat].min() * 0.8 * 100) / 100
             max_xaxis = np.ceil(agg_df[stat].max() * 100) / 100
             xtick = round((max_xaxis - min_xaxis) / 5 * 100) / 100
         
