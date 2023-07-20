@@ -3,22 +3,6 @@ import datetime
 
 st.title('5.1 사용자 입력 받기: 입력과 출력')
 
-from tqdm import tqdm
-from datetime import datetime
-import time
-import pandas as pd
-
-date = st.date_input("Choose a date", datetime.now().date())
-def get_data(date):
-    for i in tqdm(range(10)):
-        time.sleep(0.1)
-    return pd.DataFrame(
-        {"date": pd.date_range(date, periods=3), "c": [7, 8, 5], "d": [10, 11, 7]}
-    ).set_index("date")
-
-df = get_data(date)
-st.write(df)
-
 st.divider()
 # text_input 예시
 st.markdown("#### *st.text_input 예시 1*")
